@@ -3,30 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <title>URL shortener</title>
   </head>
-  <body>
-    <h1>URL shortener</h1>
-    <form action="" method="POST">
-      <label for="fullUrl">Url</label>
-      <input type="url" name="fullUrl" id="fullUrl" />
-      <button type="submit">Shorten</button>
-    </form>
-    <table>
-      <thead>
-        <tr>
-          <th>Full URL</th>
-          <th>Short URL</th>
-          <th>Clicks</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="https://google.com">https://google.com</a></td>
-          <td><a href="/123456"></a>123456</td>
-          <td>10</td>
-        </tr>
-      </tbody>
-    </table>
+  <body class="bg-dark">
+    <div class="container-fluid">
+      <h1 class="text-light">URL shortener</h1>
+      <form action="" method="POST" class="my-4 form-inline">
+        <label for="fullUrl" class="sr-only">Url</label>
+        <input
+          required
+          placeholder="Url"
+          type="url"
+          name="fullUrl"
+          id="fullUrl"
+          class="form-control col mr-2"
+        />
+        <button class="btn btn-success" type="submit">Shorten</button>
+      </form>
+      <table class="table table-dark table-responsive-lg">
+        <thead>
+          <tr>
+            <th scope="col">Full URL</th>
+            <th scope="col">Short URL</th>
+            <th scope="col">Clicks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://google.com">https://google.com</a></td>
+            <td><a href="/123456"></a>123456</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
